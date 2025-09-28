@@ -15,7 +15,7 @@
 }
 
 /* ========================================
-   NAVBAR PERSONALIZADO 
+   NAVBAR
    ======================================== */
 /* Navbar principal */
 .navbar.navbar-dark.bg-dark {
@@ -301,7 +301,7 @@
     }
 }
 /* ========================================
-   HERO SECTION - ESTILO AIRBNB
+   HERO SECTION
    ======================================== */
 
 .hero-section {
@@ -593,7 +593,7 @@
 /* ========================================
    SECCIÓN DE FORMAS DE PAGO
    ======================================== */
-/* Contenedor principal - mantiene el container de Bootstrap */
+/* Contenedor principal */
 #formas.container.my-5 {
     background: linear-gradient(135deg, var(--light-bg), #e8f4f8) !important;
     border-radius: 20px !important;
@@ -768,7 +768,7 @@
 }
 
 /* ========================================
-   FOOTER PERSONALIZADO
+   FOOTER
    ======================================== */
 footer.bg-dark {
     background: linear-gradient(135deg, var(--dark-bg), var(--primary-color)) !important;
