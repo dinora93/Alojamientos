@@ -13,30 +13,55 @@
 
 <body>
   <!-- Menu de acciones -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size:15px;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">AireHome</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-size:15px;">
+  <div class="container-fluid">
+    <!-- Div contenedor principal -->
+    <div class="navbar-container">
+      
+      <!-- Div para el logo -->
+      <div class="navbar-logo">
+        <a class="navbar-brand" href="index.php">AireHome</a>
+      </div>
+      
+      <!-- Botón toggle para móvil -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+      <!-- Div para el menú de navegación y login -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#alojamientos">Alojamientos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#formas">Formas de pago</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#footer">Mas información</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="./vistas/login.php">Entrar | Registrarse</a>
-          </li>
-        </ul>
+        <div class="navbar-content">
+          
+          <!-- Div para el menú de navegación -->
+          <div class="navbar-menu">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#alojamientos">Alojamientos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#formas">Formas de pago</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#footer">Mas información</a>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Div para registro/login -->
+          <div class="navbar-auth">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="./vistas/login.php">Entrar | Registrarse</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
       </div>
+      
     </div>
-  </nav>
+  </div>
+</nav>
   <!-- Barra de busqueda -->
   <br><br>
   <div class="d-flex justify-content-center my-3">
