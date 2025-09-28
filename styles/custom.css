@@ -1,0 +1,876 @@
+/* ========================================
+   ESTILOS PERSONALIZADOS PARA AIREHOME
+   ======================================== */
+
+/* Variables CSS */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8f9fa;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --navbar-height: 70px;
+}
+
+/* ========================================
+   NAVBAR PERSONALIZADO 
+   ======================================== */
+/* Navbar principal */
+.navbar.navbar-dark.bg-dark {
+    background-color: var(--dark-bg) !important;
+    padding: 1rem 0 !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2) !important;
+    min-height: var(--navbar-height) !important;
+}
+
+/* Container fluid del navbar */
+.navbar .container-fluid {
+    padding: 0 2rem !important;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.navbar-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
+}
+
+/* ========================================
+   LOGO (IZQUIERDA)
+   ======================================== */
+.navbar-logo {
+    flex: 0 0 auto !important;
+    order: 1 !important;
+}
+
+.navbar-logo .navbar-brand {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    color: var(--secondary-color) !important;
+    text-decoration: none !important;
+    letter-spacing: -1px !important;
+    transition: all 0.3s ease !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-logo .navbar-brand:hover {
+    color: var(--accent-color) !important;
+    transform: scale(1.05) !important;
+}
+
+.navbar-logo .navbar-brand:focus {
+    color: var(--secondary-color) !important;
+}
+
+/* ========================================
+   BOTÓN TOGGLE (MÓVIL)
+   ======================================== */
+.navbar-toggler {
+    order: 3 !important;
+    border: 2px solid var(--secondary-color) !important;
+    padding: 0.5rem !important;
+    margin-left: auto !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.4) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+    width: 24px !important;
+    height: 18px !important;
+    position: relative !important;
+}
+
+/* Crear hamburguesa personalizada */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon {
+    background-color: var(--secondary-color) !important;
+    height: 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 100% !important;
+    left: 0 !important;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px !important;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -8px !important;
+}
+
+/* ========================================
+   CONTENIDO DEL NAVBAR
+   ======================================== */
+.navbar-collapse {
+    flex-grow: 1 !important;
+    order: 4 !important;
+}
+
+.navbar-content {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* ========================================
+   MENÚ DE NAVEGACIÓN (CENTRO)
+   ======================================== */
+.navbar-menu {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.navbar-menu .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 2rem !important;
+    align-items: center !important;
+}
+
+.navbar-menu .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-menu .nav-link {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    padding: 0.75rem 1.5rem !important;
+    /* border-radius: 25px !important; */
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    /* border: 2px solid transparent !important;
+    background-color: transparent !important; */
+    margin: 0 !important;
+    white-space: nowrap !important;
+}
+
+.navbar-menu .nav-link:hover,
+.navbar-menu .nav-link:focus {
+    background-color: var(--secondary-color) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    /* box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3) !important; */
+    border-color: var(--secondary-color) !important;
+}
+
+.navbar-menu .nav-link.active {
+    border-color: var(--secondary-color) !important;
+    border-radius: 25px !important;
+    color: #ffffff !important;
+}
+
+/* ========================================
+   AUTENTICACIÓN (DERECHA)
+   ======================================== */
+.navbar-auth {
+    flex: 0 0 auto !important;
+}
+
+.navbar-auth .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-auth .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-auth .nav-link {
+    background: linear-gradient(135deg, var(--accent-color), #c0392b) !important;
+    color: #ffffff !important;
+    padding: 0.75rem 2rem !important;
+    border-radius: 30px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3) !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+}
+
+.navbar-auth .nav-link:hover,
+.navbar-auth .nav-link:focus {
+    background: linear-gradient(135deg, #c0392b, var(--accent-color)) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4) !important;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 991.98px) {
+    /* Reorganizar en móvil */
+    .navbar-container {
+        flex-wrap: wrap !important;
+    }
+    
+    .navbar-logo {
+        order: 1 !important;
+        flex: 1 !important;
+    }
+    
+    .navbar-toggler {
+        order: 2 !important;
+        flex: 0 0 auto !important;
+        margin-left: auto !important;
+    }
+    
+    .navbar-collapse {
+        order: 3 !important;
+        width: 100% !important;
+        margin-top: 1rem !important;
+    }
+    
+    .navbar-content {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding: 1rem 0 !important;
+    }
+    
+    .navbar-menu {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    .navbar-menu .navbar-nav {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .navbar-menu .nav-link {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 1rem 2rem !important;
+        margin: 0 !important;
+    }
+    
+    .navbar-auth {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    
+    .navbar-auth .nav-link {
+        padding: 1rem 3rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .container-fluid {
+        padding: 0 1rem !important;
+    }
+    
+    .navbar-logo .navbar-brand {
+        font-size: 1.8rem !important;
+    }
+    
+    .navbar-menu .nav-link,
+    .navbar-auth .nav-link {
+        font-size: 0.9rem !important;
+    }
+}
+/* ========================================
+   HERO SECTION - ESTILO AIRBNB
+   ======================================== */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Imagen de fondo */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Overlay oscuro para legibilidad */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    z-index: 2;
+}
+
+/* Contenido del hero */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Título principal */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-highlight {
+    color: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Subtítulo */
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+/* Botón del hero */
+.hero-btn {
+    background: linear-gradient(135deg, var(--accent-color), #ff6b6b);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
+    background: linear-gradient(135deg, #c0392b, var(--accent-color));
+}
+
+.hero-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-section {
+        height: 60vh;
+        min-height: 450px;
+    }
+    
+    .hero-text {
+        max-width: 480px;
+        padding: 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-btn {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .hero-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Efecto parallax sutil en la imagen */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-bg-img {
+        transform: scale(1.1);
+        transition: transform 20s ease-out;
+    }
+    
+    .hero-section:hover .hero-bg-img {
+        transform: scale(1.05);
+    }
+}
+/* ========================================
+   TARJETAS DE ALOJAMIENTOS
+   ======================================== */
+.card {
+    border: none !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease !important;
+    object-fit: cover !important;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05) !important;
+}
+
+.card-title {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3) !important;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 15px !important;
+    transition: all 0.3s ease !important;
+}
+
+.card:hover .badge {
+    transform: scale(1.1) !important;
+}
+
+/* ========================================
+   SECCIÓN DE FORMAS DE PAGO
+   ======================================== */
+/* Contenedor principal - mantiene el container de Bootstrap */
+#formas.container.my-5 {
+    background: linear-gradient(135deg, var(--light-bg), #e8f4f8) !important;
+    border-radius: 20px !important;
+    padding: 4rem 3rem !important;
+    margin: 4rem auto !important;
+    max-width: 1200px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Títulos dentro del contenedor */
+#formas h2.text-center.mb-4 {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+    font-size: 2.5rem !important;
+}
+
+#formas p.text-center.text-muted.mb-5 {
+    color: var(--text-secondary) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 3rem !important;
+}
+
+/* El div que contiene las 4 tarjetas */
+#formas .row.g-4 {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 1.5rem !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    margin: 0 !important;
+}
+
+/* Cada div individual de tarjeta */
+#formas .col-12.col-sm-6.col-md-4 {
+    flex: 0 0 calc(25% - 1.125rem) !important;
+    max-width: calc(25% - 1.125rem) !important;
+    min-width: 220px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* La tarjeta (card) dentro de cada div */
+#formas .card.shadow-sm.h-100.text-center {
+    height: 300px !important;
+    border: none !important;
+    border-radius: 15px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    background: white !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#formas .card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+}
+
+/* El body de cada tarjeta */
+#formas .card-body {
+    padding: 2rem 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    flex-grow: 1 !important;
+}
+
+/* Los íconos */
+#formas .bi.fs-1 {
+    font-size: 3.5rem !important;
+    margin-bottom: 1.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+#formas .card:hover .bi {
+    transform: scale(1.15) !important;
+}
+
+/* Colores específicos de los íconos */
+#formas .bi.text-primary {
+    color: #007bff !important;
+}
+
+#formas .bi.text-success {
+    color: #28a745 !important;
+}
+
+#formas .bi.text-warning {
+    color: #ffc107 !important;
+}
+
+#formas .bi.text-dark {
+    color: #343a40 !important;
+}
+
+/* Títulos de las tarjetas */
+#formas .card-title {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 1rem !important;
+    color: var(--primary-color) !important;
+    line-height: 1.3 !important;
+}
+
+/* Texto de descripción */
+#formas .card-text {
+    font-size: 0.95rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    #formas .row.g-4 {
+        flex-wrap: wrap !important;
+        gap: 1.5rem !important;
+    }
+    
+    #formas .col-12.col-sm-6.col-md-4 {
+        flex: 0 0 calc(50% - 0.75rem) !important;
+        max-width: calc(50% - 0.75rem) !important;
+    }
+    
+    #formas.container.my-5 {
+        padding: 3rem 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #formas .col-12.col-sm-6.col-md-4 {
+        flex: 0 0 calc(50% - 0.75rem) !important;
+        max-width: calc(50% - 0.75rem) !important;
+        min-width: 180px !important;
+    }
+    
+    #formas .card.shadow-sm.h-100.text-center {
+        height: 280px !important;
+    }
+    
+    #formas .bi.fs-1 {
+        font-size: 3rem !important;
+    }
+    
+    #formas h2.text-center.mb-4 {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #formas .row.g-4 {
+        gap: 1rem !important;
+    }
+    
+    #formas .col-12.col-sm-6.col-md-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    #formas.container.my-5 {
+        padding: 2rem 1rem !important;
+        margin: 2rem auto !important;
+    }
+    
+    #formas p.text-center.text-muted.mb-5 {
+        font-size: 1rem !important;
+    }
+}
+
+/* ========================================
+   FOOTER PERSONALIZADO
+   ======================================== */
+footer.bg-dark {
+    background: linear-gradient(135deg, var(--dark-bg), var(--primary-color)) !important;
+}
+
+footer h5,
+footer h6 {
+    color: var(--secondary-color) !important;
+    font-weight: 700 !important;
+}
+
+footer .btn-outline-light {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    border-color: var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+    transition: all 0.3s ease !important;
+}
+
+footer .btn-outline-light:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: white !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3) !important;
+}
+
+footer .border-top {
+    border-color: var(--secondary-color) !important;
+}
+
+/* ========================================
+   MODAL PERSONALIZADO
+   ======================================== */
+.modal-content {
+    border-radius: 15px !important;
+    border: none !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3) !important;
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--light-bg) !important;
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.modal-title {
+    font-weight: 700 !important;
+    color: white !important;
+}
+
+.btn-close {
+    filter: invert(1) !important;
+}
+
+.modal-footer {
+    border-top: 2px solid var(--light-bg) !important;
+}
+
+.btn-secondary {
+    background-color: var(--text-secondary) !important;
+    border-color: var(--text-secondary) !important;
+    border-radius: 20px !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out !important;
+}
+
+/* Animación inicial del navbar */
+.navbar-container {
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

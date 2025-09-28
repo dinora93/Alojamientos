@@ -8,6 +8,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- Prueba estas diferentes rutas: -->
+<link rel="stylesheet" href="../styles/custom.css">
   <title>AirHome</title>
 </head>
 
@@ -62,16 +64,53 @@
     </div>
   </div>
 </nav>
-  <!-- Barra de busqueda -->
-  <br><br>
+  <!-- Barra de busqueda 
   <div class="d-flex justify-content-center my-3">
     <form action="" method="POST" class="input-group" style="max-width: 500px;">
       <input type="text" name="buscar" class="form-control rounded-pill me-2 px-4" placeholder="Buscar por departamento...">
       <button class="btn btn-primary rounded-pill px-4">Buscar</button>
     </form>
+  </div> -->
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-container">
+    <!-- Imagen de fondo -->
+    <div class="hero-image">
+      <!-- Aquí puedes poner una imagen de una playa de El Salvador -->
+      <img src="./public/imgAlojamientos/Playa.jpg" alt="Playa de El Salvador" class="hero-bg-img">
+    </div>
+    
+    <!-- Contenido del hero -->
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Encuentra lugares únicos para quedarte en 
+          <span class="hero-highlight">El Salvador</span>
+        </h1>
+        <p class="hero-subtitle">
+          Las mejores escapadas comienzan en AireHome, con alojamientos únicos para todo tipo de viajes.
+        </p>
+        <button class="hero-btn" onclick="scrollToAlojamientos()">
+          Explorar Alojamientos
+        </button>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
   </div>
+</section>
+<!-- Función para hacer scroll a la sección de alojamientos -->
+<script>
+function scrollToAlojamientos() {
+  document.getElementById('alojamientos').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+</script>
+
 
   <div class="container my-4" id="alojamientos">
+    <h1 class="hero-title">Favorito entre huéspedes en El Salvador</h1>
+    <p class="hero-subtitle">Estos son algunos de los alojamientos más populares en AireHome según las calificaciones, evaluaciones y fiabilidad.</p>
     <div class="row g-4">
       <?php
       include_once('./conf/conf.php');
@@ -232,7 +271,7 @@
 
         <!-- Logo / Nombre -->
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-          <h5 class="fw-bold text-uppercase mb-4">Alojamientos El Paraíso</h5>
+          <h5 class="fw-bold text-uppercase mb-4">Alojamientos AireHome</h5>
           <p>
             Vive una experiencia única con nuestras habitaciones y servicios de primer nivel.
           </p>
@@ -267,7 +306,7 @@
 
     <!-- Línea inferior -->
     <div class="text-center p-3 border-top border-secondary mt-3">
-      © 2025 Alojamientos El Paraíso | Todos los derechos reservados
+      © 2025 Alojamientos AireHome | Todos los derechos reservados
     </div>
   </footer>
 
